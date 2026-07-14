@@ -1,18 +1,19 @@
 package com.example.machine_test.service;
 
-import com.example.machine_test.constant.ApplicationConstant;
+
 import com.example.machine_test.dto.ProductDTO;
 import com.example.machine_test.entity.Product;
-import com.example.machine_test.exception.ResourceNotFoundException;
 import com.example.machine_test.mapper.ProductMapper;
 import com.example.machine_test.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
 @RequiredArgsConstructor
+@Slf4j
 public class ProductServiceImpl implements IProductService {
 
     private final ProductRepository productRepository;
@@ -38,7 +39,7 @@ public class ProductServiceImpl implements IProductService {
 
     @Override
     public List<ProductDTO> getProductByTag(String tag) {
-
+        log.info("getProductByTag method got called with tag : {}", tag);
         List<ProductDTO> products = productRepository.findAllByTags(tag)
                 .stream()
                 .map( productMapper::toDTO)
