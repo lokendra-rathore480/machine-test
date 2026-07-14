@@ -1,0 +1,10 @@
+package com.example.machine_test.constant;
+
+public class ApplicationConstant {
+
+    public static final String USER_NOT_FOUND = "User not found";
+    public static final String INVALID_CREDENTIALS = "Invalid credentials";
+    public static final String USER_ALREADY_EXIST = "User already exist";
+    public static final String CUSTOMER = "Customer";
+    public static final String ROLE_NOT_FOUND = "Role not found";
+}
