@@ -18,6 +18,6 @@ public class Role {
     @Column(unique = true, nullable = false)
     private String roleName;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "role", fetch = FetchType.LAZY)
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "role", fetch = FetchType.EAGER)
     private List<UserRole> userRoleList = new ArrayList<>();
 }

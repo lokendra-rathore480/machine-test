@@ -7,4 +7,5 @@ public class ApplicationConstant {
     public static final String USER_ALREADY_EXIST = "User already exist";
     public static final String CUSTOMER = "Customer";
     public static final String ROLE_NOT_FOUND = "Role not found";
+    public static final String PRODUCT_NOT_FOUND = "Product not found";
 }

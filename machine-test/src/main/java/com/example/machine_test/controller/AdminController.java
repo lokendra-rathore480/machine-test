@@ -1,7 +1,10 @@
 package com.example.machine_test.controller;
 
+import com.example.machine_test.dto.ProductDTO;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,4 +17,5 @@ public class AdminController {
     public String home(){
         return "Welcome to Admin Controller";
     }
+
 }

@@ -24,7 +24,7 @@ public class User {
     private String email;
     private String password;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user", fetch = FetchType.LAZY)
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user", fetch = FetchType.EAGER)
     private List<UserRole> userRoleList = new ArrayList<>();
 
 }
